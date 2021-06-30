@@ -13,4 +13,10 @@ export class Satellite {
         this.operational = operational;
 
     }
+
+    shouldShowWarning() {
+
+        return true
+    }
+
 }

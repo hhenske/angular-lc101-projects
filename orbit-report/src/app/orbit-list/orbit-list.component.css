@@ -1,13 +1,14 @@
-.search-form {
-    margin-bottom: 40px;
+.counts {
+    background: #34495E;
+    color: #fff;
+    border-radius: 5px;
+    width: 225px;
 }
 
-button {
-    margin-left: 10px;
-    color: #fff;
-    background-color: #009b25;
-    border-radius: 4px;
-    padding: 2px 5px;
-    font-size: 18px;
-    cursor: pointer;
+.counts div {
+    padding: 8px;
+}
+
+.counts span {
+    float: right;
 }

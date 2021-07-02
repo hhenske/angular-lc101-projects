@@ -8,13 +8,17 @@ import { Satellite } from '../satellite';
   styleUrls: ['./orbit-list.component.css']
 })
 export class OrbitListComponent implements OnInit {
+//does this need code that wasn't asked for.... like in Angular part
+//3 of the reading?
+// alernate color: string = ""
+//change color: boolean = true;
 
 @Input() satellites: Satellite[];
   
   constructor() { }
 
   ngOnInit() {
-  }
+  } 
 
   sort(column: string): void {
     // array.sort modifies the array, sorting the items based on the given compare function

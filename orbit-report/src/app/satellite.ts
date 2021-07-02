@@ -14,13 +14,10 @@ export class Satellite {
 
     }
 
-    shouldShowWarning() {
-        
+    shouldShowWarning() : boolean {
         if (this.type == 'Space Debris') {
             
             return true;
-        } else {
-            return false;
         }
     }
 

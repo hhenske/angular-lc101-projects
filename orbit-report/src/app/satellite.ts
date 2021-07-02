@@ -15,8 +15,9 @@ export class Satellite {
     }
 
     shouldShowWarning() {
+        
         if (this.type == 'Space Debris') {
-            this.type = "background-color:#da8a8a";
+            
             return true;
         } else {
             return false;

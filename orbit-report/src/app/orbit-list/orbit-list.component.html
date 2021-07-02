@@ -16,8 +16,11 @@
    <td>
    <tr *ngFor="let satellite of satellites">{{satellite.operational}}</tr>
    </td>
-   <td>
+   <td *ngIf = "shouldShowWarning() = true">
+      <span id = spaceDebris [style.color]="red">
    <tr *ngFor="let satellite of satellites">{{satellite.orbitType}}</tr>
+      </span>
+   
    </td>
    <td>
    <tr *ngFor="let satellite of satellites">{{satellite.launchDate}}</tr>

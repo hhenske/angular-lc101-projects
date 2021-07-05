@@ -14,6 +14,10 @@
    <tr *ngFor="let satellite of satellites">
       <td>{{satellite.name}}</td>
       <td [class.warning]="satellite.shouldShowWarning()">{{satellite.type}}</td>
+      <!--<td class = noWarning>{{satellite.type}}</td>
+      <td class = warning>{{satellite.type}}</td>-->
+      <!-- trying to apply info from video.... gets 2 colums, one all pink would have to code to choose to display
+      one or the other, but then wouldn't be using the code 2 different mentors has said is correct.... but isn't working atm-->
       <td>{{satellite.operational}}</td>
       <td>{{satellite.orbitType}}</td>
       <td>{{satellite.launchDate}}</td>

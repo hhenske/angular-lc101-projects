@@ -24,6 +24,8 @@ export class Satellite {
             //the changeColor variable is a boolean defined in the skill-set.component.ts file.
             // If changeColor is true, Angular adds the ol-style class of the tag. If changeColor 
             //is false, the class remains absent from the tag."
+        } else {
+            return false;
         }
     }
             

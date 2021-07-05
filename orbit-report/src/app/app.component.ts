@@ -10,25 +10,27 @@ export class AppComponent {
   title = 'orbit-report';
   sourceList: Satellite[];
   displayList: Satellite[];
+  searchTerm: ""
 
   constructor() {
     this.sourceList = [];
     let satellitesUrl = 'https://handlers.education.launchcode.org/static/satellites.json';
     this.displayList = [];
+    this.searchTerm =""
       window.fetch(satellitesUrl).then(function(response) {
         response.json().then(function(data) {
         
         let fetchedSatellites = data.satellites;
               // TODO: loop over satellites
               for (let i=0; i<fetchedSatellites.length; i++) {
-              let Satellite = {
-                name: fetchedSatellites[i].name, 
-                type: fetchedSatellites[i].type, 
-                launchDate: fetchedSatellites[i].launchDate, 
-                orbitType: fetchedSatellites[i].orbitType, 
-                operational: fetchedSatellites[i].operational
-              }
-              this.sourceList.push(Satellite)
+              let satelliteTable = new Satellite (
+                fetchedSatellites[i].name, 
+                fetchedSatellites[i].type, 
+                fetchedSatellites[i].launchDate, 
+                fetchedSatellites[i].orbitType, 
+                fetchedSatellites[i].operational
+              )
+              this.sourceList.push(satelliteTable)
               }
               // TODO: create a Satellite object using new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
               // TODO: add the new Satellite object to sourceList using: this.sourceList.push(satellite);
